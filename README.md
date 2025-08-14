@@ -21,7 +21,7 @@ Sigue el flujo del documento de clase: crea el modelo `Product`, un `Comment` re
 
 ---
 
-## 🧩 Estructura relevante
+## Estructura relevante
 ```
 <repo-root>/
 ├─ manage.py
@@ -48,7 +48,7 @@ Sigue el flujo del documento de clase: crea el modelo `Product`, un `Comment` re
 
 ---
 
-## 🛠️ Requisitos
+## Requisitos
 - Python 3.10+ (recomendado)
 - **Django 5.x**
   - Si usas **Python 3.13**, instala: `pip install "Django>=5.1,<6"`
