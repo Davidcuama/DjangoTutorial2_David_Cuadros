@@ -1,0 +1,24 @@
+{% extends 'pages/base.html' %}
+{% block title %}Products – Online Store{% endblock %}
+{% block content %}
+<h1 class="mb-3">Products</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for p in products %}
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ p.name }}</h5>
+        {% if p.price > 2000 %}
+          <p class="card-text" style="color:red;">${{ p.price }}</p>
+        {% else %}
+          <p class="card-text fw-bold">${{ p.price }}</p>
+        {% endif %}
+        <a href="{% url 'show' p.id %}" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <p>No products yet.</p>
+  {% endfor %}
+</div>
+{% endblock %}

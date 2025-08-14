@@ -1,0 +1,10 @@
+{% extends 'pages/base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>Contact us</h1>
+<ul class="list-unstyled">
+  <li><strong>Email:</strong> {{ email }}</li>
+  <li><strong>Address:</strong> {{ address }}</li>
+  <li><strong>Phone:</strong> {{ phone }}</li>
+</ul>
+{% endblock %}

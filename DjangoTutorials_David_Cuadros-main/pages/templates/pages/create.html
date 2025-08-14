@@ -1,0 +1,19 @@
+{% extends 'pages/base.html' %}
+{% block title %}New Product – Online Store{% endblock %}
+{% block content %}
+<h2>Create product</h2>
+<form method="post" novalidate>
+  {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    {{ form.name }}
+    {% for e in form.name.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Price</label>
+    {{ form.price }}
+    {% for e in form.price.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
+  </div>
+  <button class="btn btn-success" type="submit">Save</button>
+</form>
+{% endblock %}
